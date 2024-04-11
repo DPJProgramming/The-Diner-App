@@ -13,7 +13,7 @@ $f3 = Base::instance();
 //define a default route
 //https://dpjprogramming.greenriverdev.com/328/HelloFatFree/
 $f3->route('GET /', function(){
-    echo '<h1> Hello Diner </h1>';
+    //echo '<h1> Hello Diner </h1>';
 
     //render view page
     $view = new Template();
