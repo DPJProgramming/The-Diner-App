@@ -50,6 +50,37 @@ $f3->route('GET /menus/dinner', function(){
         <li> Casserole</li>";
 });
 
+//order1 get
+$f3->route('GET|POST /order1', function($f3){
+
+    //make sure form has been posted
+    if($_SERVER['REQUEST_METHOD'] == 'POST'){
+
+        //get data from post array
+        $food = $_POST['food'];
+        $meal = $_POST['meal'];
+
+        if(isset($food) && isset($meal)){
+            $f3->set('SESSION.food', $food);
+            $f3->set('SESSION.meal', $meal);
+            $f3->reroute('order2');
+        }
+        else{
+            echo "error";
+        }
+    }
+
+    $view = new Template();
+    echo $view->render('views/order1.html');
+});
+
+//order2
+$f3->route('GET /order2', function($f3){
+    var_dump( $f3->get('SESSION'));
+    $view = new Template();
+    echo $view->render('views/order2.html');
+});
+
 //run fat free
 $f3->run();
 ?>
