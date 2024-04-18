@@ -10,3 +10,6 @@
 [18-Apr-2024 16:26:28 UTC] [328/The-Diner-App/index.php:85] Base->run()
 [18-Apr-2024 16:26:33 UTC] Array callback has to contain indices 0 and 1 [/home/dpjprogr/public_html/328/The-Diner-App/index.php:79]
 [18-Apr-2024 16:26:33 UTC] [328/The-Diner-App/index.php:85] Base->run()
+[18-Apr-2024 16:51:12 UTC] Too few arguments to function Base::set(), 1 passed in /home/dpjprogr/public_html/328/The-Diner-App/index.php on line 83 and at least 2 expected [/home/dpjprogr/public_html/328/The-Diner-App/vendor/bcosca/fatfree-core/base.php:385]
+[18-Apr-2024 16:51:12 UTC] [328/The-Diner-App/index.php:83] Base->set()
+[18-Apr-2024 16:51:12 UTC] [328/The-Diner-App/index.php:98] Base->run()

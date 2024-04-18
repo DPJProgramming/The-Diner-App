@@ -75,10 +75,23 @@ $f3->route('GET|POST /order1', function($f3){
 });
 
 //order2
-$f3->route('GET /order2', function($f3){
-    var_dump( $f3->get('SESSION'));
+$f3->route('GET|POST /order2', function($f3){
+    var_dump( $_POST);
+
+    $conds = $_POST['conds'];
+    if(true){
+        $f3->set('SESSION.conds', $conds);
+        $f3->reroute('order2');
+    }
     $view = new Template();
     echo $view->render('views/order2.html');
+});
+
+//summary
+$f3->route('GET /summary', function($f3){
+    var_dump($f3->get('SESSION'));
+    $view = new Template();
+    echo $view->render('views/orderSummary.html');
 });
 
 //run fat free
